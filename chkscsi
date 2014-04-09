@@ -1,0 +1,6 @@
+#!/bin/bash
+# Sometimes hotplug devices are not recognized by the operating system and the process must be initiated manually.
+# contact: Tobias Poge; poge@cbs.mpg.de;
+# Max Planck Institute for Human Cognitive and Brain Sciences; Leipzig - Germany
+# IT Department
+for i in /sys/class/scsi_host/*; do echo "- - -" > $i/scan; done
